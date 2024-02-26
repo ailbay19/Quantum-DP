@@ -1,0 +1,138 @@
+@import "./colors.scss";
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
+#app {
+  background-color: $main-bg;
+  min-height: 100vh;
+  min-width: 10vw;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 50px;
+
+  * {
+    color: #a8abbe;
+  }
+
+  .left-content {
+    .left-filter {
+      background-color: #1e1f24;
+      border: 1px solid #262833;
+      height: fit-content;
+      margin-bottom: 30px;
+      .card-body {
+        padding: 1.5rem;
+        .title {
+          margin-bottom: 1.5rem;
+        }
+        .form-select {
+          width: 100%;
+          background: transparent;
+          border: 1px solid #475569;
+          margin-bottom: 1.5rem;
+          font-size: 14px;
+          line-height: 16px;
+          color: #f1f5f9;
+          padding: 10px 30px 10px 10px;
+          cursor: pointer;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        .customized-range-input {
+          width: 100%;
+          accent-color: #475569;
+          border: 1px solid #475569;
+          margin-right: 10px;
+          &::-webkit-slider-runnable-track {
+            background-color: transparent;
+          }
+        }
+        .epsilon-value {
+          margin-bottom: 0;
+          width: 30px;
+        }
+      }
+    }
+    .table {
+      border: 1px solid #a8abbe;
+      border-radius: 0.375rem;
+      overflow: hidden;
+      th,
+      td {
+        background-color: #1e1f24;
+      }
+      th {
+        color: #a8abbe;
+      }
+      td {
+        color: #f1f5f9;
+      }
+    }
+  }
+  .histogram-container {
+    .histogram-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 30px;
+      column-gap: 30px;
+    }
+  }
+}
+
+// Grid classes
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-fs {
+  align-items: flex-start;
+}
+.ai-fe {
+  align-items: flex-end;
+}
+.ai-c {
+  align-items: center;
+}
+
+.jc-fs {
+  justify-content: flex-start;
+}
+.jc-fe {
+  justify-content: flex-end;
+}
+.jc-c {
+  justify-content: center;
+}
+
+// Text style
+.title {
+  color: #ffffff !important;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.s1 {
+  font-size: 14px;
+  line-height: 20px;
+}
+.s2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.s3 {
+  font-size: 18px;
+  line-height: 26px;
+}
